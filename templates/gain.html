@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='gain.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight Gain Tips</title>
+</head>
+<body>
+    <div class="container">
+        <h1>How to Gain Weight Based on Your TMB Result</h1>
+
+        <!-- TMB Display -->
+        {% if result %}
+        <div class="tmb-box">
+            <p><strong>Your Current TMB:</strong> {{ result.tmb }} kcal/day</p>
+        </div>
+        {% endif %}
+
+        <p>Your Total Metabolic Rate (TMB) is the number of calories your body needs daily to maintain its current weight. To gain weight in a healthy manner, you need to consume more calories than your body burns while prioritizing nutrient quality and muscle growth.</p>
+        
+        <h2>Key Tips</h2>
+        
+        <!-- Three Tip Boxes -->
+        <div class="tips-grid">
+            <div class="tip-box">
+                <h3>🍽 Nutrition</h3>
+                <ul>
+                    <li><strong>Increase Calories:</strong> Add 300–500 kcal/day.</li>
+                    <li><strong>Nutrient-Dense Foods:</strong> Nuts, seeds, grains, lean proteins.</li>
+                    <li><strong>Frequent Meals:</strong> 5–6 smaller meals daily.</li>
+                </ul>
+            </div>
+
+            <div class="tip-box">
+                <h3>🏋️ Training</h3>
+                <ul>
+                    <li><strong>Strength Training:</strong> Focus on progressive overload.</li>
+                    <li><strong>Protein Intake:</strong> 1.6–2.2 g/kg body weight.</li>
+                    <li><strong>Muscle Growth:</strong> Resistance training + surplus calories.</li>
+                </ul>
+            </div>
+
+            <div class="tip-box">
+                <h3>📈 Consistency</h3>
+                <ul>
+                    <li><strong>Track Progress:</strong> Weigh yourself weekly.</li>
+                    <li><strong>Stay Consistent:</strong> Diet + training over time.</li>
+                    <li><strong>Adjust:</strong> Modify calories as needed.</li>
+                </ul>
+            </div>
+        </div>
+
+        <p class="note">Remember: gaining weight in a healthy way is gradual. Prioritize muscle over fat by combining proper nutrition with training and consistency.</p>
+    </div>
+</body>
+</html>

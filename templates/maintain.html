@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='maintain.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maintain Your Weight</title>
+</head>
+<body>
+    <div class="container">
+        <h1>How to Maintain Your Weight</h1>
+
+        <!-- TMB Display -->
+        <div class="tmb-box">
+            <p><strong>Your Current TMB:</strong> {{ result.tmb }} kcal/day</p>
+        </div>
+
+        <p>Maintaining your weight requires balancing the calories you consume with the calories your body burns daily. Your Total Metabolic Rate (TMB) is a valuable tool to determine how many calories you need to maintain your current weight.</p>
+        
+        <h2>Key Tips</h2>
+
+        <!-- Three Tip Boxes -->
+        <div class="tips-grid">
+            <div class="tip-box">
+                <h3>⚖️ Balance</h3>
+                <ul>
+                    <li><strong>Calorie Awareness:</strong> Use your TMB as a baseline.</li>
+                    <li><strong>Balanced Meals:</strong> Include proteins, healthy fats, and carbs.</li>
+                    <li><strong>Hydration:</strong> Drink water consistently throughout the day.</li>
+                </ul>
+            </div>
+
+            <div class="tip-box">
+                <h3>🏃 Stay Active</h3>
+                <ul>
+                    <li><strong>Regular Exercise:</strong> Walking, cycling, jogging, or lifting.</li>
+                    <li><strong>Preserve Muscle:</strong> Resistance training supports metabolism.</li>
+                    <li><strong>Consistency:</strong> Daily movement keeps energy balance stable.</li>
+                </ul>
+            </div>
+
+            <div class="tip-box">
+                <h3>🌙 Lifestyle</h3>
+                <ul>
+                    <li><strong>Sleep:</strong> Aim for 7–9 hours nightly.</li>
+                    <li><strong>Track Progress:</strong> Weigh in or check body composition regularly.</li>
+                    <li><strong>Small Adjustments:</strong> Tweak intake or activity as needed.</li>
+                </ul>
+            </div>
+        </div>
+
+        <p class="note">Maintaining your weight is about consistency and healthy habits. Small lifestyle adjustments help prevent gradual weight gain and support long-term health.</p>
+    </div>
+</body>
+</html>

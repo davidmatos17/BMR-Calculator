@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+    <title>Basal Metabolic Rate Result</title>
+</head>
+<body>
+    <div class="centered-content">
+        <h1>Welcome, {{ result.name }}!</h1>
+        <p>Your TMB result is: {{ result.tmb }} kcal</p>
+        <div class="button-group">
+            <form action="{{ url_for('weight_goal') }}" method="POST">
+                <button name="goal" value="maintain">Maintain Weight</button>
+                <button name="goal" value="lose">Lose Weight</button>
+                <button name="goal" value="gain">Gain Weight</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="back-button">
+        <a href="{{ url_for('index') }}">Go Back Home</a>
+    </div>
+</body>
+</html>

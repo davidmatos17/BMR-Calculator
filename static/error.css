@@ -1,0 +1,58 @@
+/* Full-page gradient background */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ff512f, #dd2476); /* orange → pink */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+/* Error card */
+.error-container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.45);
+    padding: 40px 60px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Titles */
+.error-container h1 {
+    font-size: 3.5rem;
+    margin: 0;
+}
+.error-container h2 {
+    margin: 15px 0;
+    font-size: 1.6rem;
+    color: #ffcccb; /* light red highlight */
+}
+.error-container p {
+    font-size: 1rem;
+    margin-bottom: 25px;
+}
+
+/* Button style */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 12px 28px;
+    background: linear-gradient(45deg, #24c6dc, #514a9d); /* blue → purple */
+    border-radius: 30px;
+    font-weight: bold;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}

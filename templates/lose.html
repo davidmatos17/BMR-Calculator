@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='lose.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight Loss Tips</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Weight Loss Tips</h1>
+
+        <!-- TMB Display -->
+        {% if result %}
+        <div class="tmb-box">
+            <p><strong>Your Current TMB:</strong> {{ result.tmb }} kcal/day</p>
+        </div>
+        {% endif %}
+
+        <p>Your Total Metabolic Rate (TMB) helps you understand how many calories your body needs daily to maintain your current weight. To lose weight effectively, you need to create a calorie deficit, meaning you consume fewer calories than your body burns.</p>
+
+        <h2>Key Tips</h2>
+
+        <!-- Three Tip Boxes -->
+        <div class="tips-grid">
+            <div class="tip-box">
+                <h3>🥗 Calorie Control</h3>
+                <ul>
+                    <li><strong>Deficit:</strong> 500–1000 kcal/day for 0.5–1 kg weekly loss.</li>
+                    <li><strong>Track Intake:</strong> Use apps or a food diary.</li>
+                    <li><strong>Hydration:</strong> Drink water before meals to reduce intake.</li>
+                </ul>
+            </div>
+
+            <div class="tip-box">
+                <h3>🏃 Activity</h3>
+                <ul>
+                    <li><strong>Cardio:</strong> Walking, cycling, running to burn calories.</li>
+                    <li><strong>Strength Training:</strong> Preserve/build lean muscle.</li>
+                    <li><strong>Consistency:</strong> Regular workouts increase metabolism.</li>
+                </ul>
+            </div>
+
+            <div class="tip-box">
+                <h3>🌙 Lifestyle</h3>
+                <ul>
+                    <li><strong>Sleep:</strong> 7–9 hours to regulate hunger hormones.</li>
+                    <li><strong>Patience:</strong> Sustainable loss takes time.</li>
+                    <li><strong>Balance:</strong> Avoid extreme diets—adjust as needed.</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>Important Note</h2>
+        <p class="note">Always consult a healthcare professional or registered dietitian before starting any weight loss program. Individual needs vary, and personalized guidance ensures safety and effectiveness.</p>
+    </div>
+</body>
+</html>

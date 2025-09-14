@@ -1,0 +1,106 @@
+/* Reset some defaults */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Fullscreen gradient background */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* background: linear-gradient(135deg, #667eea, #764ba2); */
+    background: radial-gradient(circle at top right, #2d3b78, #764ba2, #000000);
+    color: #fff;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Container for result */
+.centered-content {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 40px 60px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Headline */
+.centered-content h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+/* Result text */
+.centered-content p {
+    font-size: 2rem;
+    font-weight: 500;
+    background: linear-gradient(45deg, #2adbf3, #ebcd36);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 30px;
+}
+
+/* Buttons */
+.centered-content button {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(45deg, #24c6dc, #514a9d);
+    border: none; 
+    border-radius: 10px;
+    /* add more space between buttons*/
+    margin: 0 10px;
+    padding: 10px 30px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.centered-content button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.centered-content button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+/* Back button styling */
+.back-button {
+    text-align: center;
+    margin-top: 40px;   /* space below the main container */
+}
+
+.back-button a {
+    align-items: center;
+    background: linear-gradient(135deg, #1976D2, #1976D2);
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Hover & active states */
+.back-button a:hover {
+    background: linear-gradient(135deg, #2196F3, #1565C0);
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 14px rgba(0,0,0,0.2);
+}
+
+.back-button a:active {
+    transform: scale(0.97);
+    box-shadow: 0px 3px 6px rgba(0,0,0,0.2);
+}
+
+/* Smooth fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
